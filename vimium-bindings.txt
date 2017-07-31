@@ -1,0 +1,278 @@
+# Author: Krista Victorsen
+# Email: victorsenkrista@gmail.com
+
+# Usage example: "map <c-b> scrollLeft" maps the keybinding 
+# "Control + b" to the action "scrollLeft"
+
+# Note:
+# - use 'a' for 'alt/option'
+# - use 'm' for 'command'
+# - use 'c' for 'control'
+
+########################################
+# Bootstrapping
+########################################
+# Prevent conflicts with vimuim defaults
+unmapAll
+
+# NOTE: I manage this in Better Touch Tool
+# translate esc <c-g>
+
+########################################
+# Navigating the page
+########################################
+
+# Scroll down
+map <c-n> scrollDown
+
+# Scroll up
+map <c-p> scrollUp
+
+# Scroll to the top of the page
+map <m-<> scrollToTop
+
+# Scroll to the bottom of the page
+map <m->> scrollToBottom
+
+# NOTE: These are managed from Better Touch Tool 
+# to avoid conflicts with OS X shortcuts
+#
+# Scroll a half page down
+# map <c-v> scrollPageDown
+#
+# Scroll a half page up
+# map <m-v> scrollPageUp
+
+# Scroll a full page down
+# map scrollFullPageDown
+#
+# Scroll a full page up
+# map scrollFullPageUp
+
+# Scroll left
+map <c-b> scrollLeft
+
+# Scroll right
+map <c-f> scrollRight
+
+# Scroll all the way to the left
+map <c-a> scrollToLeft
+
+# Scroll all the way to the right
+map <c-e> scrollToRight
+
+# Reload the page (ctrl+shift+r)
+map <c-R> reload
+
+# Copy the current URL to the clipboard
+# map <m-W> copyCurrentUrl
+#
+# Open the clipboard's URL in the current tab
+# map  openCopiedUrlInCurrentTab
+#
+# Open the clipboard's URL in a new tab
+# map  openCopiedUrlInNewTab
+#
+# Go up the URL hierarchy
+# map  goUp
+#
+# Go to root of current URL hierarchy
+# map  goToRoot
+# 
+# Enter insert mode
+# map  enterInsertMode
+#
+# Enter visual mode
+# map  enterVisualMode
+#
+# Enter visual line mode
+# map  enterVisualLineMode
+#
+# Pass the next key to the page
+# map  passNextKey
+
+# Focus the first text input on the page
+map <m-I> focusInput
+
+# NOTE: I prefer to use the builtin binding <tab> to do this
+# Select the next frame on the page
+# map <c-i> nextFrame
+#
+# Select the page's main/top frame
+# map mainFrame
+
+########################################
+# Marks?
+########################################
+# Create a new mark
+# Marks.activateCreateMode
+#
+# Go to a mark
+# Marks.activateGotoMode
+
+########################################
+# Links
+########################################
+
+# Open a link in the current tab
+map ' LinkHints.activateMode
+
+# Open a link in a new tab
+map " LinkHints.activateModeToOpenInNewTab
+
+# Open a link in a new tab & switch to it
+# LinkHints.activateModeToOpenInNewForegroundTab
+#
+# Open multiple links in a new tab
+# LinkHints.activateModeWithQueue
+#
+# Download link url
+# LinkHints.activateModeToDownloadLink
+#
+# Open a link in incognito window
+# LinkHints.activateModeToOpenIncognito
+
+# Copy a link URL to the clipboard
+map : LinkHints.activateModeToCopyLinkUrl
+
+# Follow the link labeled previous or <
+# map  goPrevious
+#
+# Follow the link labeled next or >
+# map  goNext
+
+########################################
+# Using the vomnibar
+########################################
+
+# Open URL, bookmark or history entry
+map <m-X> Vomnibar.activate
+
+# NOTE: The vomnibar is your one-stop-shop for everything
+# Just like m-x in emacs :)
+#
+# Open URL, bookmark or history entry in a new tab
+map <m-x> Vomnibar.activateInNewTab
+
+# Open a bookmark
+# map  Vomnibar.activateBookmarks
+#
+# Open a bookmark in a new tab
+# map  Vomnibar.activateBookmarksInNewTab
+
+# NOTE: This keybinding mirrors "open find mode", because
+# '?' is just <shift>+'/', and I have '/' bound to "search page"
+# 
+# Search through your open tabs
+map ? Vomnibar.activateTabSelection
+
+# Edit the current URL
+map <c-u> Vomnibar.activateEditUrl
+
+# Edit the current URL and open in a new tab
+# map Vomnibar.activateEditUrlInNewTab
+
+########################################
+# Using find
+#########################################
+
+# NOTE: It took me a while to realize this, but you need to 
+# hit <return> BEFORE you'll actually be able to cycle through
+# matches. 
+# 
+# NOTE: How to enable fuzzy matching in find mode:
+# - click "Show Advanced Options" (on the vimium config 
+#   page) 
+# - make sure that "Treat find queries as regular expressions"
+#   is checked.
+#
+# Enter find mode
+map / enterFindMode
+
+# Cycle forward to the next find match
+map n performFind
+
+# Cycle backward to the previous find match
+map p performBackwardsFind
+
+########################################
+# Navigating history
+#########################################
+
+# Go back in history
+map <c-x>, goBack
+
+# Go forward in history
+map <c-x>. goForward
+
+########################################
+# Manipulating tabs
+#########################################
+
+# NOTE: The following shortcuts are managed within my Vivaldi config
+# Create new tab
+# map <m-t> createTab
+#
+# Go one tab left
+# map <m-n> previousTab
+#
+# Go one tab right
+# map <m-p> nextTab
+
+# Go to previously-visited tab (recent tab)
+# map visitPreviousTab
+
+# Go to the first tab
+map <m-,> firstTab
+
+# Go to the last tab
+map <m-.> lastTab
+
+# Duplicate current tab
+# map <c-t>d duplicateTab
+
+# Pin or unpin current tab
+# map <c-t>p togglePinTab
+#
+# Mute or unmute current tab
+# map <c-t>m toggleMuteTab
+
+# NOTE: I manage this setting from BetterTouchTool, as of 7/22/2017
+# The reason why I manage this externally is because 
+# this particular binding seems to break in vimium on vivaldi :(
+#
+# Close current tab
+# map <c-x>k removeTab
+
+# NOTE: I manage this setting from Vivaldi's native settings
+# Restore closed tab
+# map <m-Z> restoreTab
+
+# Move tab to new window
+map <c-t>w moveTabToNewWindow
+
+# Close tabs on the left (previous taps)
+# map <c-k>p closeTabsOnLeft
+#
+# Close tabs on the right (next tabs)
+# map <c-k>n closeTabsOnRight
+
+# Close all other tabs
+map <c-x>1 closeOtherTabs
+
+# Move tab to the left (previous)
+# map <m-P> moveTabLeft
+#
+# Move tab to the right (next)
+# map <m-N> moveTabRight
+
+########################################
+# Miscellaneous
+########################################
+
+# NOTE: Mapping follows emacs's "show keybindings for mode" :)
+# Show help
+map <c-h>m showHelp
+
+# View page source
+# map toggleViewSource
