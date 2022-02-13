@@ -1,6 +1,5 @@
-#+TITLE: Krista Victorsen's Vivaldi config file
-#+AUTHOR: Krista Victorsen
-#+EMAIL: victorsenkrista@gmail.com
+#+TITLE: K. Victorsen's Vivaldi config file
+#+AUTHOR: K. Victorsen
 * Tree tabs
 - https://forum.vivaldi.net/topic/15332/tree-tabs
 - https://gitlab.com/kroppy/TreeTabs
