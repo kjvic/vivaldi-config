@@ -1,5 +1,4 @@
-# Author: Krista Victorsen
-# Email: victorsenkrista@gmail.com
+# Author: K. Victorsen
 
 # Usage example: "map <c-b> scrollLeft" maps the keybinding 
 # "Control + b" to the action "scrollLeft"
